@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
+}
+.main-container{
+    @apply h-screen
+}
+
+.main-container div{
+    @apply absolute bottom-0 bg-[#1DB954] h-[50vh] w-full
+}
+
+.dropbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 160px;
+    background: var(--drop-bg-color);
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    transition: all 50ms ease-out;
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
+    z-index: -1;
+}
+
+.dropbox.dragover {
+    background: rgba(140, 82, 255, 0.6); /* Change background color on dragover */
+    color: white; /* Change text color on dragover */
+    -webkit-backdrop-filter: blur(10px);
+    z-index:999!important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(140, 82, 255, 0.3); /* Add shadow on dragover */
+}
+.loader-container{
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+.loader{
+    height:50px;
+    width:50px;
+    border:3px solid #aaa;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation: suryansh 1s linear infinite;
+}
+@keyframes suryansh {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.content-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    background-color: #f8f8f8;
+    padding: 20px 100px;
+
+}
+.content-card img{
+    aspect-ratio: 4/2;
+    object-fit: cover;
+}
+.content-card{
+    overflow: hidden;
+        width: 31%;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    height: max-content;
+    margin-bottom: 20px;
+    color: #222;
+    line-height: 25px;
+}
+.content-info{
+    padding:20px
+}
+.single-line{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content-info h1.heading , h1.heading span{
+    font-size: 26px;
+    font-weight: 600;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2.4em;
+    color: blueviolet;
+    text-shadow: ;
+}
+.content-info h1{
+    font-weight:200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.content-card > img{
+    width:100%
+}
+
+
+.file-name{
+    @apply py-1
+}
+
+.input-box{
+    @apply hidden
+}
+
+.url-container{
+    @apply absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex justify-between items-center text-5xl
+    bg-gray-100 h-[5rem] aspect-[7/1] rounded-3xl shadow-lg shadow-gray-700 text-center overflow-hidden p-3
+    max-sm:h-[3rem] max-sm:text-2xl max-sm:rounded-lg
+}
+
+.url-container input{
+    @apply w-full h-full bg-transparent text-slate-500 outline-none text-2xl max-sm:text-lg
+}
+
+
